@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App150.MainPage"
+             x:Name="MyPage"
+             >
+
+    <StackLayout Padding="20">
+        <Label Text="Id" TextColor="Red" />
+        <Editor BindingContext="{x:Reference Name=MyPage}" Text="{Binding obj.id}"   IsReadOnly="True" />
+        <Label Text="First Name" TextColor="Red"/>
+        <Editor BindingContext="{x:Reference Name=MyPage}" Text="{Binding obj.first_name}" IsReadOnly="True"/>
+        <Label Text="Last Name" TextColor="Red"/>
+        <Editor BindingContext="{x:Reference Name=MyPage}" Text="{Binding obj.last_name}" IsReadOnly="True"/>
+        <Label Text="Email" TextColor="Red"/>
+        <Editor BindingContext="{x:Reference Name=MyPage}" Text="{Binding obj.email}" IsReadOnly="True"/>
+        <Editor BindingContext="{x:Reference Name=MyPage}" Text="Image" IsReadOnly="True"/>
+        <Image BindingContext="{x:Reference Name=MyPage}" Source="{Binding obj.avatar}"/>
+    </StackLayout>
+
+</ContentPage>
